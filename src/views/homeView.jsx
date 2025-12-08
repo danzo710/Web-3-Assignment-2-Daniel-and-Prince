@@ -1,4 +1,4 @@
-const HomeView = () => {
+const homeView = () => {
   return (
     <div>
       <h1>Welcome to the Shop</h1>
@@ -7,4 +7,4 @@ const HomeView = () => {
   );
 };
 
-export default HomeView;
+export default homeView;

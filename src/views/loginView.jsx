@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { LoginContext } from '../context/loginContext';
 import { useNavigate } from 'react-router'; 
 
-const LoginView = () => {
+const loginView = () => {
   const { login } = useContext(LoginContext);
   const navigate = useNavigate();
 
@@ -34,4 +34,4 @@ const LoginView = () => {
   );
 };
 
-export default LoginView;
+export default loginView;

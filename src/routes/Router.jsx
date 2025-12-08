@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router';
-import HomeView from './views/HomeView';
-import LoginView from './views/LoginView';
+import HomeView from '../views/homeView';
+import LoginView from '../views/loginView';
 
 const Router = () => {
   return (

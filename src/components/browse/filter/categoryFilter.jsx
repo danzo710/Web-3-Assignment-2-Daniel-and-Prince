@@ -1,5 +1,5 @@
 import { Checkbox } from "@/components/ui/checkbox";
-import { allFilters } from "../../../utils/filterHelper";
+import { allFilters } from "../../../utils/filter/filterHelper";
 
 const CategoryFilter = (props) => {
   const { currentFilters, setCurrentFilters } = props;

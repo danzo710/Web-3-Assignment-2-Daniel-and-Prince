@@ -4,8 +4,8 @@ import { ProductGrid } from "../components/browse/productGrid";
 import { ProductsContext } from "../context/productsContext";
 import { useContext, useState } from "react";
 import { CurrentFilters } from "../components/browse/currentFilters";
-import { filterProducts } from "../utils/filteredProducts";
-import { sortProducts } from "../utils/sortProducts";
+import { filterProducts } from "../utils/filter/filteredProducts";
+import { sortProducts } from "../utils/sort/sortProducts";
 import {
   Empty,
   EmptyDescription,

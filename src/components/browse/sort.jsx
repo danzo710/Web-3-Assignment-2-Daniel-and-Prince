@@ -1,5 +1,5 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { sortOptions } from "../../utils/sortHelp";
+import { sortOptions } from "../../utils/sort/sortHelp";
 
 const Sort = (props) => {
   const { sortOption, setSortOption } = props;

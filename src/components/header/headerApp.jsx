@@ -1,14 +1,18 @@
-import HeaderBar from './headerBar.jsx';
-import HeaderMenu from './headerMenu.jsx';
-import HeaderActions from './headerActions.jsx';
+import HeaderBar from './headerBar';
+import HeaderMenu from './headerMenu';
+import HeaderActions from './headerActions';
 
-const HeaderApp = (props) => {
-    return (
-        <header className="header">
-          <HeaderBar />
-          <HeaderMenu isAdmin={props.isAdmin} />
-          <HeaderActions cartCount={props.cartCount} />
-        </header>
-        );
-}
+const HeaderApp = ({ isAdmin, cartCount }) => {
+  return (
+    <header className="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+
+      <HeaderBar />
+
+            <HeaderMenu isAdmin={isAdmin} />
+
+      <HeaderActions cartCount={cartCount} />
+    </header>
+  );
+};
+
 export default HeaderApp;

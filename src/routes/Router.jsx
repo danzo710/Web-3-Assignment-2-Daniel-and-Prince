@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router';
 import HomeView from '../views/homeView';
 import LoginView from '../views/loginView';
-import BrowseView from '../views/browse';
+import BrowseView from '../views/browseView';
 
 const Router = () => {
   return (

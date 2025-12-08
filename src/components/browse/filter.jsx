@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 
 import { Checkbox } from "@/components/ui/checkbox";
-import { allFilters } from "../utils/filterHelper";
+import { allFilters } from "../../utils/filterHelper";
 
 const Filter = () => {
   return (
@@ -82,4 +82,4 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+export {Filter};

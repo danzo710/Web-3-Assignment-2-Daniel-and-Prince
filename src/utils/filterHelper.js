@@ -1,7 +1,7 @@
 const allFilters = {
-    genders: ["Men", "Women"],
+    genders: ["mens", "womens"],
     categories: ["Tops", "Bottoms", "Outerwear", "Dresses", "Sweaters"],
-    sizes: ["Extra Small", "Small", "Medium", "Large", "Extra Large"],
+    sizes: ["XS", "S", "M", "L", "XL"],
 colors: [
     {
         "name": "Black",

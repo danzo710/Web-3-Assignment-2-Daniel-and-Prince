@@ -8,23 +8,15 @@ import { filterProducts } from "../utils/filteredProducts";
 import { sortProducts } from "../utils/sortProducts";
 import {
   Empty,
-  EmptyContent,
   EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
   EmptyTitle,
-} from "@/components/ui/empty"
+} from "@/components/ui/empty";
 
 const BrowseView = () => {
-  const { products, loading } = useContext(ProductsContext);
-  const [currentFilters, setCurrentFilters] = useState({
-    genders: [],
-    categories: [],
-    sizes: [],
-    colors: [],
-  });
+  const { products, loading, selectedFilters, setSelectedFilters } = useContext(ProductsContext);
   const [sortOption, setSortOption] = useState("name");
-  const filteredProducts = filterProducts(products, currentFilters);
+
+  const filteredProducts = filterProducts(products, selectedFilters);
   const sortedProducts = sortProducts(filteredProducts, sortOption);
 
   if (loading) return <p>Loading products...</p>;
@@ -33,19 +25,19 @@ const BrowseView = () => {
     <div className="flex gap-4">
       <div className="w-1/4">
         <Filter 
-          currentFilters={currentFilters} 
-          setCurrentFilters={setCurrentFilters} 
+          currentFilters={selectedFilters} 
+          setCurrentFilters={setSelectedFilters} 
         />
       </div>
 
       <div className="w-3/4">
         <Sort sortOption={sortOption} setSortOption={setSortOption} />
         <CurrentFilters
-          currentFilters={currentFilters}
-          setCurrentFilters={setCurrentFilters}
+          currentFilters={selectedFilters}
+          setCurrentFilters={setSelectedFilters}
         />
 
-        {filteredProducts.length === 0 ? (
+        {sortedProducts.length === 0 ? (
           <Empty>
             <EmptyTitle>No products match the selected filters</EmptyTitle>
             <EmptyDescription>
@@ -53,7 +45,7 @@ const BrowseView = () => {
             </EmptyDescription>
           </Empty>
         ) : (
-          <ProductGrid products={filteredProducts} />
+          <ProductGrid products={sortedProducts} />
         )}
       </div>
     </div>

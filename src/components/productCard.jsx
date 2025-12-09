@@ -27,7 +27,7 @@ const ProductCard = (props) => {
 
       {(props.viewType === "browse" || props.viewType === "single") && (
         <CardFooter className="flex items-center justify-between">
-          <span className="text-lg font-bold">${props.product.price.toFixed(2)}</span>
+          <span className="text-lg font-bold bg-[#EFBE4F] text-black">${props.product.price.toFixed(2)}</span>
           <Button size="sm">Add to Cart</Button>
         </CardFooter>
       )}
@@ -36,12 +36,6 @@ const ProductCard = (props) => {
         <CardContent>
           <p>{props.product.category}</p>
         </CardContent>
-      )}
-
-      {(props.viewType === "browse" || props.viewType === "single") && (
-        <CardFooter>
-          <Button className="bg-[#EFBE4F] text-black">Add to Cart</Button>
-        </CardFooter>
       )}
     </Card>
   );

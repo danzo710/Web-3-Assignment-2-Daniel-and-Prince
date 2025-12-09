@@ -1,9 +1,9 @@
 import React from "react";
-import TopSellingProductsTable from "./Table-TopSellingProduct.jsx";
-import TopProfitableProductsTable from "./Table-TopProfitableProduct.jsx";
-import CategorySalesProfitTable from "./Table-CategorySalesProfit.jsx";
-import GenderSalesPieChart from "./PieChart-GenderSales.jsx";
-import CategorySalesPieChart from "./PieChart-CategorySales.jsx";
+import TopSellingProductsTable from "./table-topsellingproduct.jsx";
+import TopProfitableProductsTable from "./table-toprofitableproduct.jsx";
+import CategorySalesProfitTable from "./table-categorysalesprofit.jsx";
+import GenderSalesPieChart from "./pieChart-gendersales.jsx";
+import CategorySalesPieChart from "./pieChart-categorysales.jsx";
 
 const SalesDashboard = () => {
   // Placeholder data for top selling products (sorted by totalSales descending)

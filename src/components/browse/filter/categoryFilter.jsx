@@ -15,14 +15,17 @@ const CategoryFilter = (props) => {
   };
 
   return (
-    <div>
+    <div className="flex flex-wrap gap-3">
       {allFilters.categories.map((category) => (
-        <div key={category} className="flex items-center gap-2">
+        <div
+          key={category}
+          className="flex items-center gap-2 w-[45%] sm:w-[30%]"
+        >
           <Checkbox
             checked={selectedCategories.includes(category)}
             onCheckedChange={() => handleToggle(category)}
           />
-          <span>{category}</span>
+          <span className="truncate">{category}</span>
         </div>
       ))}
     </div>

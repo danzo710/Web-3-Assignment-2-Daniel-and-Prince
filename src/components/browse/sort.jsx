@@ -5,8 +5,8 @@ const Sort = (props) => {
   const { sortOption, setSortOption } = props;
 
   return (
-    <div className="mb-4">
-      <span>Sort: </span>
+    <div className="mb-4 flex items-center gap-2">
+      <span className="whitespace-nowrap">Sort:</span>
       <Select
         value={sortOption}
         onValueChange={(value) => setSortOption(value)}

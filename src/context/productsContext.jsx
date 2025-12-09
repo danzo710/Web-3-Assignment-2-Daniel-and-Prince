@@ -33,7 +33,7 @@ const ProductsProvider = (props) => {
         products,
         loading,
         selectedFilters,
-        setSelectedFilters, // <-- add this!
+        setSelectedFilters,
       }}
     >
       {props.children}

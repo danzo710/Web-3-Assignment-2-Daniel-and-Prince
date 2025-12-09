@@ -1,37 +1,31 @@
-import * as React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import React, { useContext } from "react";
+import { ProductsContext } from "../../context/productsContext";
+import {ProductCard} from "../productCard";
 
-export function singleproductRelated() {
+const SingleProductRelated = (props) => {
+  const { products } = useContext(ProductsContext);
+  const currentProductId = props.product?.id;
+
+  if (!products || products.length === 0) return null;
+
+  const relatedProducts = products
+    .filter((p) => p.id !== currentProductId)
+    .slice(0, 5);
+
   return (
-    <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-full max-w-sm"
-    >
-      <CarouselContent className="flex space-x-4 justify-center w-full">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-3xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
+    <div className="my-12">
+      <h2 className="text-2xl font-bold mb-6">Related Products</h2>
+      <div className="grid gap-6" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
+        {relatedProducts.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            viewType="single"
+          />
         ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+      </div>
+    </div>
   );
-}
-export default singleproductRelated;
+};
+
+export default SingleProductRelated;

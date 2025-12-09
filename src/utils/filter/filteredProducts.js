@@ -8,7 +8,6 @@ const filterProducts = (products, currentFilters) => {
       return false;
     }
 
-
     if (
       currentFilters.categories.length > 0 &&
       !currentFilters.categories.includes(product.category)
@@ -18,14 +17,14 @@ const filterProducts = (products, currentFilters) => {
 
     if (
       currentFilters.sizes.length > 0 &&
-      !currentFilters.sizes.every((size) => product.sizes.includes(size))
+      !currentFilters.sizes.some((size) => product.sizes.includes(size))
     ) {
       return false;
     }
 
     if (
       currentFilters.colors.length > 0 &&
-      !currentFilters.colors.every((color) =>
+      !currentFilters.colors.some((color) =>
         product.color.some((c) => c.name === color)
       )
     ) {

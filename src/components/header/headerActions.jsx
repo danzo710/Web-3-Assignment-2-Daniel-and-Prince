@@ -30,7 +30,6 @@ const HeaderActions = (props) => {
           <ArrowLeftStartOnRectangleIcon className="h-6 w-6" /> Login
         </button>
       )}
-      {/* Shopping Cart */}
   <button 
     onClick={() => navigate('/cart')} 
     className="flex items-center gap-1 hover:opacity-80"

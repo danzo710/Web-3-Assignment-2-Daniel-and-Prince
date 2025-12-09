@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router';
-import HomeView from '../views/homeView';
-import LoginView from '../views/loginView';
-import BrowseView from '../views/browseView';
+import {HomeView} from '../views/homeView';
+import {LoginView} from '../views/loginView';
+import {BrowseView} from '../views/browseView';
+import { GenderView } from '../views/genderView';
 
 const Router = () => {
   return (
@@ -9,9 +10,9 @@ const Router = () => {
       <Route path="/" element={< HomeView />} />
       <Route path="/login" element={< LoginView />}/>
       <Route path="/browse" element={< BrowseView />}/>
+      <Route path="/product/men" element={<GenderView gender="mens" />} />
+      <Route path="/product/women" element={<GenderView gender="womens" />} />
       {/* <Route path="/dashboard/sales" element={}/>
-      <Route path="/product/men" element={}/>
-      <Route path="/product/woman" element={}/>
       <Route path="/cart" element={}/>
       <Route path="/product/single" element={}/>
       <Route path="about" element={}/> */}

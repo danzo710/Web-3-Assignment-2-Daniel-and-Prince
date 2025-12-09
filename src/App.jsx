@@ -1,21 +1,19 @@
-import { BrowserRouter } from "react-router";
-import HeaderApp from "./components/header/headerApp";
-import Router from "./routes/Router";
-import { LoginProvider } from "./context/loginContext";
-import SalesDashboard from "./components/dashboard/salesDashboard";
-import SingleProductApp from "./components/singleproductview/singleproductApp";
-import SingleProductNav from "./components/singleproductview/singleproductNav";
+import { BrowserRouter } from 'react-router';
+import HeaderApp from './components/header/headerApp';
+import Router from './routes/Router';
+import { LoginProvider } from './context/loginContext';
+import { ProductsProvider } from './context/productsContext';
+
 function App() {
   return (
-    <>
-      {/* <LoginProvider>
-        <BrowserRouter>
-          <HeaderApp />
-          <Router />
-        </BrowserRouter>
-      </LoginProvider> */}
-      <SingleProductApp />
-    </>
+    <ProductsProvider>
+    <LoginProvider>
+    <BrowserRouter>
+      <HeaderApp />
+      <Router />
+    </BrowserRouter>
+    </LoginProvider>
+    </ProductsProvider>
   );
 }
 

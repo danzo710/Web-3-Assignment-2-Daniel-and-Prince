@@ -4,3 +4,5 @@ Unsplash for images: https://unsplash.com
 Women view Hero image: https://unsplash.com/photos/photo-of-woman-holding-white-and-black-paper-bags-_3Q3tsJ01nc 
 Men View Hero Image: https://unsplash.com/photos/a-group-of-men-walking-down-a-street-next-to-each-other-R_H6wvZvpU0 
 Home Hero Image: 
+Placeholders from: https://placehold.co/
+ROuting: React Router

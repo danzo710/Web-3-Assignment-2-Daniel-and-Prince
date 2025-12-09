@@ -11,6 +11,7 @@ import {
   EmptyDescription,
   EmptyTitle,
 } from "@/components/ui/empty";
+import { Spinner } from "@/components/ui/spinner";
 
 const BrowseView = () => {
   const { products, loading, selectedFilters, setSelectedFilters } = useContext(ProductsContext);
@@ -19,7 +20,13 @@ const BrowseView = () => {
   const filteredProducts = filterProducts(products, selectedFilters);
   const sortedProducts = sortProducts(filteredProducts, sortOption);
 
-  if (loading) return <p>Loading products...</p>;
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-[60vh]">
+        <Spinner className="w-16 h-16 text-primary" />
+      </div>
+    );
+  }
 
   return (
     <div className="flex gap-4">

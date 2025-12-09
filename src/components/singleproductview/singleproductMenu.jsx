@@ -40,19 +40,6 @@ const SingleProductMenu = () => {
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
               Premium Running Shoes
             </h1>
-<<<<<<< HEAD
-=======
-            
-            {/* Placeholder Image
-            <div className="mb-8">
-              <img 
-                src={productImage}
-                alt="Product Detail" 
-                className="w-full h-64 object-cover rounded-lg"
-              />
-            </div> */}
-            
->>>>>>> 29e1a39c22628010f677076362a289574034c866
             {/* Subtitle */}
             <p className="text-lg text-gray-500 mb-6">Ultimate Comfort & Performance</p>
 

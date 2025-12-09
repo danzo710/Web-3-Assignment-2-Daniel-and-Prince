@@ -1,10 +1,16 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router";
 import { LoginContext } from "../context/loginContext";
-import {Card,CardHeader,CardTitle,CardContent,CardFooter,} from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {Field,FieldGroup,FieldLabel} from "@/components/ui/field";
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 
 const LoginView = () => {
   const { login } = useContext(LoginContext);
@@ -24,22 +30,22 @@ const LoginView = () => {
         </CardHeader>
 
         <CardContent>
+
+          <div className="mb-4 text-sm text-muted-foreground bg-muted p-2 rounded-md">
+            This login is simulated for the assignment.
+            Any username/password will work.
+          </div>
+
           <form onSubmit={handleSubmit}>
             <FieldGroup className="space-y-4">
               <Field>
                 <FieldLabel htmlFor="username">Username</FieldLabel>
-                <Input id="username" defaultValue="admin" required />
+                <Input id="username" required />
               </Field>
-
 
               <Field>
                 <FieldLabel htmlFor="password">Password</FieldLabel>
-                <Input
-                  id="password"
-                  type="password"
-                  defaultValue="password"
-                  required
-                />
+                <Input id="password" type="password" required />
               </Field>
 
               <Button type="submit" className="w-full mt-2">

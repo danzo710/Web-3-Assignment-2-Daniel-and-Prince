@@ -17,7 +17,7 @@ const AboutUsDialog = () => {
     <Dialog open={open} onOpenChange={setOpen}>
 
       <DialogTrigger asChild>
-        <Button variant="outline">About Us</Button>
+        <Button variant="outline" className="bg-[#EFBE4F]">About Us</Button>
       </DialogTrigger>
 
       <DialogContent className="sm:max-w-lg">

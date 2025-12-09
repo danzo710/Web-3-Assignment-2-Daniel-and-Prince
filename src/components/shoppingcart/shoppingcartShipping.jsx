@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useShipping } from '../../context/shippingContext.jsx';
+// import { s } from "react-router/dist/development/index-react-server-client-CCjKYJTH";
+
 
 const ShoppingCartShipping = () => {
-  const [shippingMethod, setShippingMethod] = useState("standard");
-  const [destination, setDestination] = useState("canada");
-
+const { shippingMethod, setShippingMethod, shippingCost, destination, setDestination } = useShipping();
   return (
     <>
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
@@ -22,8 +22,16 @@ const ShoppingCartShipping = () => {
               onChange={(e) => setShippingMethod(e.target.value)}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
             >
-              <option value="standard">Standard</option>
-              <option value="express">Express</option>
+              <option
+                value="standard"
+              >
+                Standard
+              </option>
+              <option
+                value="express"
+              >
+                Express
+              </option>
               <option value="priority">Priority</option>
             </select>
           </div>
@@ -37,7 +45,9 @@ const ShoppingCartShipping = () => {
             <select
               id="destination"
               value={destination}
-              onChange={(e) => setDestination(e.target.value)}
+              onChange={(e) => {
+                setDestination(e.target.value);
+              }}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
             >
               <option value="canada">Canada</option>

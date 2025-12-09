@@ -30,7 +30,7 @@ const ProductCard = (props) => {
 
       {(props.viewType === "browse" || props.viewType === "single") && (
         <CardFooter>
-          <Button>Add to Cart</Button>
+          <Button className="bg-[#EFBE4F] text-black">Add to Cart</Button>
         </CardFooter>
       )}
     </Card>

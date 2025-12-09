@@ -64,7 +64,7 @@ const GenderView = (props) => {
             <Button
               onClick={() => handleCategoryClick(category)}
               variant="outline"
-              className="w-full"
+              className="w-full bg-[#EFBE4F]"
             >
               Browse {category}
             </Button>

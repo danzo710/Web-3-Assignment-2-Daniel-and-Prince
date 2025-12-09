@@ -6,19 +6,23 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
+import { Link } from "react-router";
 const ProductCard = (props) => {
   const placeholderUrl = `https://placehold.co/200x200?text=placeholder`;
 
   return (
     <Card className="product-card">
       <CardHeader>
-        <CardTitle>{props.product.name}</CardTitle>
-        <img
-          src={placeholderUrl}
-          alt={props.product.name}
-          className="w-full h-48 object-cover mb-2"
-        />
+        <Link to={`/product/${props.product.id}`}>
+          <CardTitle>{props.product.name}</CardTitle>
+        </Link>
+        <Link to={`/product/${props.product.id}`}>
+          <img
+            src={placeholderUrl}
+            alt={props.product.name}
+            className="w-full h-48 object-cover mb-2"
+          />
+        </Link>
       </CardHeader>
 
       {(props.viewType === "browse" || props.viewType === "single") && (

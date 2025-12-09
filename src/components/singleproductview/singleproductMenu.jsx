@@ -4,8 +4,12 @@ import SizesSelector from "./selectors/SizesSelector";
 import QuantitySelector from "./selectors/QuantitySelector";
 import AddToCartButton from "./AddToCartButton";
 import SingleProductRelated from "./singleproductRelated";
+import { AdminProductView } from "../../views/adminProductView";
+import { LoginContext } from "../../context/loginContext";
+import { useContext } from "react";
 import { useState } from "react";
 const SingleProductMenu = (props) => {
+  const { isLoggedIn } = useContext(LoginContext);
   const product = props.product;
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
@@ -28,7 +32,6 @@ const SingleProductMenu = (props) => {
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-none overflow-hidden">
 
-          
           <ProductImageSection product={product} />
 
           <div className="p-8 sm:p-10">
@@ -83,6 +86,7 @@ const SingleProductMenu = (props) => {
               selectedSize={selectedSize}
               selectedColor={selectedColor}
             />
+              {isLoggedIn && <AdminProductView product={product} />}
           </div>
         </div>
 

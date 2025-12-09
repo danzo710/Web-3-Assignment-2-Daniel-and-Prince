@@ -1,4 +1,4 @@
-import { calculateSalesData } from "../../utils/calculateSalesData";
+import { calculateSalesData } from "../utils/sales/calculateSalesData";
 
 const SalesOverview = (props) => {
 

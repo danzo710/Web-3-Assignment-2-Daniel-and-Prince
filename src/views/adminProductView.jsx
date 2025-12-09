@@ -6,7 +6,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { SalesOverview } from "./SalesOverview";
+import { SalesOverview } from "../components/salesOverview";
 
 const AdminProductView = (props) => {
   if (!props.product) return null;

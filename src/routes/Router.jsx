@@ -14,8 +14,7 @@ const Router = () => {
       <Route path="/product/women" element={<GenderView gender="womens" />} />
       {/* <Route path="/dashboard/sales" element={}/>
       <Route path="/cart" element={}/>
-      <Route path="/product/single" element={}/>
-      <Route path="about" element={}/> */}
+      <Route path="/product/single" element={}/> */}
     </Routes>
   );
 };

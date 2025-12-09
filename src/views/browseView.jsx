@@ -24,7 +24,7 @@ const BrowseView = () => {
   return (
     <div className="flex gap-4">
       <div className="w-1/4">
-        <Filter 
+        <Filter
           currentFilters={selectedFilters} 
           setCurrentFilters={setSelectedFilters} 
         />

@@ -1,6 +1,6 @@
 const allFilters = {
     genders: ["mens", "womens"],
-    categories: ["Tops", "Bottoms", "Outerwear", "Dresses", "Sweaters"],
+    categories: ["Tops", "Bottoms", "Outerwear", "Dresses", "Sweaters", "Shoes", "Swwimwear", "Intimates", "Loungewear", "Swimwear", "Jumpsuits", "Accessories"],
     sizes: ["XS", "S", "M", "L", "XL"],
 colors: [
     {

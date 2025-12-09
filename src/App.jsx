@@ -8,17 +8,17 @@ import SingleProductApp from './components/singleproductview/singleproductApp';
 
 function App() {
   return (
-    // <ProductsProvider>
-    // <LoginProvider>
-    // <BrowserRouter>
-    //   <HeaderApp />
-    //   <Router />
-    // </BrowserRouter>
-    // </LoginProvider>
-    // </ProductsProvider>
-    <>
-      <SingleProductApp />
-    </>
+    <ProductsProvider>
+    <LoginProvider>
+    <BrowserRouter>
+      <HeaderApp />
+      <Router />
+    </BrowserRouter>
+    </LoginProvider>
+    </ProductsProvider>
+    // <>
+    //   <SingleProductApp />
+    // </>
   );
 }
 

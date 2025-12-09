@@ -5,22 +5,6 @@ import { ProductCard } from "../components/productCard";
 import { Button } from "@/components/ui/button";
 import MenHero from "../assets/Hero-Men.jpg"
 import WomenHero from "../assets/Women-Hero.jpg"
-//TODO
-// 1. add hero images for men and women view
-// 2. fix the product showcase.
-// 3. find more images for each category in unsplash
-// 4. organize images in simple lay out shadcn has a component for this
-// 5. add the category button for each photo. photo should click too
-// gender should be done
-// TODO
-// 1. add chart to admin product view. look at prince code or ask him.
-// 2. make logo for headerbar
-// 3. finish log in form with the small alert.
-// 4. fix layout in browse
-// 5. fix layout for about us dialog
-// 6. go over components and split them properly.
-// 7. should be all or one more thing
-// 8. possibly handle homeview if prince can't do it.
 
 const GenderView = (props) => {
   const { products, setSelectedFilters } = useContext(ProductsContext);

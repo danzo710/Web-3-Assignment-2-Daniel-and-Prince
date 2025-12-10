@@ -13,5 +13,5 @@ export default defineConfig({
           '@': path.resolve(__dirname, './src'),
         },
       },
-  base: '/web-3-assignment-2-daniel-and-prince/',
+ base: '/Web-3-Assignment-2-Daniel-and-Prince/',
 })

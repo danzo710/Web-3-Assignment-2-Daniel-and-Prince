@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/table";
 
 import { calculateSalesData } from "../../utils/sales/calculateSalesData";
+import {SalesPieChart} from "../dashboard/PieChart-Sales";
 
 export const AdminTable = ({ product }) => {
   if (!product || !product.sales) return null;
@@ -57,6 +58,9 @@ export const AdminTable = ({ product }) => {
           ))}
         </TableBody>
       </Table>
+
+      <SalesPieChart salesData={product.sales} />
+      {console.log(product)}
     </div>
   );
 };

@@ -34,6 +34,7 @@ const SingleProductNav = (props) => {
         <BreadcrumbPage>{product.name}</BreadcrumbPage>
       </BreadcrumbItem>
     </Breadcrumb>
+    
   );
 };
 

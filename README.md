@@ -1,3 +1,11 @@
+## Web 3 Assignment 2 — Single Page Application
+
+Overview:
+This assignment simulates a simple shopping website, created in collaboration by Daniel Anzola and Prince Manzano. The shop includes multiple views that update dynamically based on user actions. Product data is retrieved from an external API and passed through the application using props and context.
+
+
+
+
 ## 📦 Technologies Used
 
 - **Framework:** React + Vite  
@@ -42,7 +50,7 @@
 ## 🔗 Links
 
 - **GitHub Repository:** https://github.com/danzo710/Web-3-Assignment-2-Daniel-and-Prince  
-- **Live Site (GitHub Pages):** `[your deployed URL here]`
+- **Live Site (GitHub Pages):** `deployed url`
 
 
 ## 🖼 Images & Assets

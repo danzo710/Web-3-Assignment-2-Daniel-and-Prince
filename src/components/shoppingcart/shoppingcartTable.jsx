@@ -1,6 +1,9 @@
 import ShoppingCartTableRow from "./shoppingcartTableRow";
+import { useCart } from "../../context/cartContext";
 
-const ShoppingCartTable = ({ cartItems, onRemoveItem }) => {
+const ShoppingCartTable = () => {
+  const { cartItems, removeItemFromCart } = useCart();
+
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
       <div className="overflow-x-auto">
@@ -17,17 +20,7 @@ const ShoppingCartTable = ({ cartItems, onRemoveItem }) => {
           </thead>
           <tbody>
             {cartItems.map((item) => (
-              <ShoppingCartTableRow
-                key={item.id}
-                id={item.id}
-                image={item.image}
-                color={item.color}
-                size={item.size}
-                price={item.price}
-                quantity={item.quantity}
-                subtotal={item.subtotal}
-                onRemoveItem={onRemoveItem}
-                />
+              <ShoppingCartTableRow key={item.id + item.size + item.color} {...item} onRemoveItem={removeItemFromCart} />
             ))}
           </tbody>
         </table>

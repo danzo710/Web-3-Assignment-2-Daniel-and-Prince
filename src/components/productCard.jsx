@@ -1,43 +1,37 @@
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
-const ProductCard = (props) => {
-  const placeholderUrl = `https://placehold.co/200x200?text=placeholder`;
+import ProductOptions from "./ProductOptions";
+
+const ProductCard = ({ product, viewType }) => {
+  const [showModal, setShowModal] = useState(false);
 
   return (
-    <Card className="product-card">
-      <CardHeader>
-        <Link to={`/product/${props.product.id}`}>
-          <CardTitle>{props.product.name}</CardTitle>
-        </Link>
-        <Link to={`/product/${props.product.id}`}>
-          <img
-            src={placeholderUrl}
-            alt={props.product.name}
-            className="w-full h-48 object-cover mb-2"
-          />
-        </Link>
-      </CardHeader>
+    <div className="product-card relative">
+      <Link to={`/product/${product.id}`}>
+        <h2>{product.name}</h2>
+        <img
+          src={product.image || "https://placehold.co/200x200?text=placeholder"}
+          alt={product.name}
+          className="w-full h-48 object-cover"
+        />
+      </Link>
 
-      {(props.viewType === "browse" || props.viewType === "single") && (
-        <CardFooter className="flex items-center justify-between">
-          <span className="text-lg font-bold bg-[#EFBE4F] text-black">${props.product.price.toFixed(2)}</span>
-          <Button size="sm">Add to Cart</Button>
-        </CardFooter>
+      {(viewType === "browse" || viewType === "single") && (
+        <div className="mt-2 flex justify-between items-center">
+          <span className="font-bold">${product.price.toFixed(2)}</span>
+          <Button onClick={() => setShowModal(true)}>Add to Cart</Button>
+        </div>
       )}
 
-      {props.viewType === "categoryOnly" && (
-        <CardContent>
-          <p>{props.product.category}</p>
-        </CardContent>
+      {showModal && (
+        <ProductOptions
+          product={product}
+          open={showModal}
+          setOpen={setShowModal}
+        />
       )}
-    </Card>
+    </div>
   );
 };
 

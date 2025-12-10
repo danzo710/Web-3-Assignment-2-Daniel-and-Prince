@@ -16,7 +16,7 @@ function App() {
         <LoginProvider>
           <CartProvider>
             <ShippingProvider>
-              <BrowserRouter>
+              <BrowserRouter basename="/web-3-assignment-2-daniel-and-prince">
                 <HeaderApp />
                 <Router />
                 <MainFooter />

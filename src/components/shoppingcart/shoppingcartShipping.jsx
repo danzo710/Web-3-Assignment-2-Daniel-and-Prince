@@ -7,7 +7,7 @@ const ShoppingCartShipping = () => {
   const { shippingMethod, setShippingMethod, destination, setDestination, shippingCost, calculateShippingCost } = useShipping();
 
   useEffect(() => {
-    calculateShippingCost(merchandiseSubtotal); // recalculates shippingCost in context
+    calculateShippingCost(merchandiseSubtotal);
   }, [merchandiseSubtotal, shippingMethod, destination]);
 
   return (

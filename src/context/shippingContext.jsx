@@ -8,7 +8,7 @@ export const ShippingProvider = ({ children }) => {
   const [shippingCost, setShippingCost] = useState(0);
 
   const calculateShippingCost = (subtotal) => {
-    if (subtotal > 500) return 0; // free shipping
+    if (subtotal > 500) return 0;
 
     const rates = {
       standard: { canada: 10, "united-states": 15, international: 20 },

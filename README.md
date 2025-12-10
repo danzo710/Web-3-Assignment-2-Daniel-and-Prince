@@ -50,7 +50,7 @@ This assignment simulates a simple shopping website, created in collaboration by
 ## 🔗 Links
 
 - **GitHub Repository:** https://github.com/danzo710/Web-3-Assignment-2-Daniel-and-Prince  
-- **Live Site (GitHub Pages):** https://danzo710.github.io/web-3-assignment-2-daniel-and-prince
+- **Live Site (GitHub Pages):** https://danzo710.github.io/Web-3-Assignment-2-Daniel-and-Prince/
 
 
 ## 🖼 Images & Assets

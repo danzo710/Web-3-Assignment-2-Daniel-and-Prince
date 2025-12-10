@@ -1,5 +1,8 @@
+import { useCart } from "../../context/cartContext";
+
 const AddToCartButton = (props) => {
   const product = props.product;
+  const { addItemToCart } = useCart(); 
 
   const handleClick = () => {
     if (!props.selectedSize) {
@@ -11,14 +14,7 @@ const AddToCartButton = (props) => {
       return;
     }
 
-    console.log("Adding to cart:", {
-      productId: product.id,
-      name: product.name,
-      price: product.price,
-      quantity: props.quantity,
-      size: props.selectedSize,
-      color: props.selectedColor,
-    });
+    addItemToCart(product, props.quantity, props.selectedSize, props.selectedColor);
 
     alert(
       `Added ${props.quantity}x ${product.name} (${props.selectedSize}, ${props.selectedColor}) to cart`

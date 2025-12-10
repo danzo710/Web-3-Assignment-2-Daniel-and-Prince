@@ -5,6 +5,9 @@ import {BrowseView} from '../views/browseView';
 import { GenderView } from '../views/genderView';
 import SalesDashboard from '../components/dashboard/SalesDashboard';
 import SingleProductApp from '../components/singleproductview/singleproductApp';
+import ShoppingCartApp from '../components/shoppingcart/shoppingcartApp';
+import { ShippingProvider } from "../context/shippingContext";
+
 const Router = () => {
   return (
     <Routes>
@@ -15,8 +18,7 @@ const Router = () => {
       <Route path="/product/women" element={<GenderView gender="womens" />} />
       <Route path="/dashboard/sales" element={<SalesDashboard />} />
       <Route path="/product/:id" element={<SingleProductApp />} />
-      {/* <Route path="/cart" element={}/>*/}
-
+      <Route path="/cart" element={<ShippingProvider><ShoppingCartApp /></ShippingProvider>}/>
     </Routes>
   );
 };

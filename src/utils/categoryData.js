@@ -21,11 +21,10 @@ import WomensShoesImg from "../assets/womens/Women-Shoes.jpg";
 import WomensIntimatesImg from "../assets/womens/Women-Intimates.jpg";
 import WomensSwimwearImg from "../assets/womens/Women-Swimwears.jpg";
 
-// Hero images
+//Hero Images
 import MenHero from "../assets/hero/Hero-Men.jpg";
 import WomenHero from "../assets/hero/Women-Hero.jpg";
 
-// Config objects
 const heroImages = {
   mens: MenHero,
   womens: WomenHero,
@@ -57,5 +56,4 @@ const categoryConfig = {
   ],
 };
 
-// Named exports
 export { heroImages, categoryConfig };

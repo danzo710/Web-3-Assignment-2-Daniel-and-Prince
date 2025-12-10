@@ -9,7 +9,7 @@ const ProductCard = ({ product, viewType }) => {
   return (
     <div className="product-card relative">
       <Link to={`/product/${product.id}`}>
-        <h2>{product.name}</h2>
+        <h2 className="text-white">{product.name}</h2>
         <img
           src={product.image || "https://placehold.co/200x200?text=placeholder"}
           alt={product.name}
@@ -19,7 +19,7 @@ const ProductCard = ({ product, viewType }) => {
 
       {(viewType === "browse" || viewType === "single") && (
         <div className="mt-2 flex justify-between items-center">
-          <span className="font-bold">${product.price.toFixed(2)}</span>
+          <span className="font-bold text-white">${product.price.toFixed(2)}</span>
           <Button onClick={() => setShowModal(true)}>Add to Cart</Button>
         </div>
       )}

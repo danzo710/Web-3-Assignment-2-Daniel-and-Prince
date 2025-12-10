@@ -14,7 +14,7 @@ const SingleProductRelated = (props) => {
 
   return (
     <div className="my-12">
-      <h2 className="text-2xl font-bold mb-6">Related Products</h2>
+      <h2 className="text-2xl font-bold mb-6 text-white">Related Products</h2>
       <div className="grid gap-6" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
         {relatedProducts.map((product) => (
           <ProductCard

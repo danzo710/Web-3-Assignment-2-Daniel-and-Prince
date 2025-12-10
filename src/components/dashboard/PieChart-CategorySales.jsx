@@ -21,7 +21,7 @@ const CategorySalesPieChart = (props) => {
 
   console.log('Category chart data:', data); // 🔹 add this to debug
 
-  const COLORS = ['#3B82F6', '#60A5FA', '#93C5FD', '#BFDBFE', '#DBEAFE', '#EFF6FF'];
+  const COLORS = ['#3B82F6', '#60A5FA', '#4987cdff', '#135cb5ff', '#0f3e7dff', '#0873ffff'];
 
   return (
     <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 lg:col-span-2" style={{ height: 350 }}>

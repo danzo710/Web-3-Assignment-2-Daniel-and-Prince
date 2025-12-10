@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router";
 import { LoginContext } from "../context/loginContext";
+import { MainFooter } from "../components/mainFooter.jsx";
 import {
   Card,
   CardHeader,
@@ -30,10 +31,9 @@ const LoginView = () => {
         </CardHeader>
 
         <CardContent>
-
           <div className="mb-4 text-sm text-muted-foreground bg-muted p-2 rounded-md">
-            This login is simulated for the assignment.
-            Any username/password will work.
+            This login is simulated for the assignment. Any username/password
+            will work.
           </div>
 
           <form onSubmit={handleSubmit}>
@@ -61,6 +61,8 @@ const LoginView = () => {
           </Button>
         </CardFooter>
       </Card>
+
+      <MainFooter />
     </div>
   );
 };

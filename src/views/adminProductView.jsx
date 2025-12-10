@@ -7,29 +7,26 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { SalesOverview } from "../components/salesOverview";
-
+import {AdminTable} from "../components/singleproductview/adminTable";
 const AdminProductView = (props) => {
   if (!props.product) return null;
 
   return (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Button variant="secondary">Admin View</Button>
-      </SheetTrigger>
-
-      <SheetContent position="right" size="lg">
-        <SheetHeader>
-          <SheetTitle>Admin Product View</SheetTitle>
-        </SheetHeader>
-
-        <div className="mt-4">
-          <h2 className="text-xl font-semibold">{props.product.name}</h2>
-          <p className="text-gray-600">Category: {props.product.category}</p>
+    <>
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="secondary">Admin View</Button>
+        </SheetTrigger>
+        <div className="flex flex-col">
+          <SheetContent position="right" size="lg">
+            <SheetHeader>
+              <SheetTitle>Admin Product View</SheetTitle>
+            </SheetHeader>
+            <AdminTable product={props.product} />
+          </SheetContent>
         </div>
-
-        <SalesOverview product={props.product} />
-      </SheetContent>
-    </Sheet>
+      </Sheet>
+    </>
   );
 };
 

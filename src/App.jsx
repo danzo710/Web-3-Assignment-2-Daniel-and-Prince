@@ -7,26 +7,21 @@ import ShoppingCartApp from "./components/shoppingcart/shoppingcartApp";
 import ShoppingCartBtn from "./components/shoppingcartbtn";
 import { ShippingProvider } from "./context/shippingContext.jsx";
 import ShoppingCartShipping from "./components/shoppingcart/shoppingcartShipping.jsx";
-import {HomeView} from "./views/homeView.jsx";
+import { HomeView } from "./views/homeView.jsx";
+import { AdminProductView } from "./views/adminProductView";
 function App() {
   return (
     <>
-      <ProductsProvider>
-        <LoginProvider>
-          <BrowserRouter>
-            <HeaderApp />
-            <Router />
-          </BrowserRouter>
-        </LoginProvider>
-      </ProductsProvider>
-
-      {/* <ShoppingCartApp /> */}
-      {/* <ShoppingCartBtn /> */}
-
-      {/* <ShippingProvider>
-        <ShoppingCartShipping />
-        other components that use shipping
-      </ShippingProvider> */}
+      <ShippingProvider>
+        <ProductsProvider>
+          <LoginProvider>
+            <BrowserRouter>
+              <HeaderApp />
+              <Router />
+            </BrowserRouter>
+          </LoginProvider>
+        </ProductsProvider>
+      </ShippingProvider>
     </>
   );
 }

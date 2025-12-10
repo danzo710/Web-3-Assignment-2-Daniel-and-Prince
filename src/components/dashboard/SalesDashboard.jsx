@@ -6,7 +6,7 @@ import GenderSalesPieChart from './PieChart-GenderSales';
 import CategorySalesProfitTable from './Table-CategorySalesProfit';
 import CategorySalesPieChart from './PieChart-CategorySales'; 
 
-const SalesDashboard = (props) => {
+const SalesDashboard = () => {
   const { products, loading } = useContext(ProductsContext);
 
   if (loading) return <p className="text-center mt-10">Loading...</p>;

@@ -6,6 +6,8 @@ import { useContext, useState } from "react";
 import { CurrentFilters } from "../components/browse/currentFilters";
 import { filterProducts } from "../utils/filter/filteredProducts";
 import { sortProducts } from "../utils/sort/sortProducts";
+import {MainFooter} from "../components/mainFooter";
+
 import {
   Empty,
   EmptyDescription,
@@ -55,6 +57,7 @@ const BrowseView = () => {
           <ProductGrid products={sortedProducts} />
         )}
       </div>
+      <MainFooter />
     </div>
   );
 };

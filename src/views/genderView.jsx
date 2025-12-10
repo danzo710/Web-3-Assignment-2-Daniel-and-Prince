@@ -4,6 +4,7 @@ import { ProductsContext } from "../context/productsContext";
 import { GenderHero } from "../components/gender/genderHero";
 import { GenderCategories } from "../components/gender/genderCategories";
 import { heroImages, categoryConfig } from "../utils/categoryData";
+import {MainFooter} from "../components/mainFooter";
 
 const GenderView = (props) => {
   const { setSelectedFilters } = useContext(ProductsContext);
@@ -29,6 +30,7 @@ const GenderView = (props) => {
         categories={categoryConfig[props.gender]}
         handleCategoryClick={handleCategoryClick}
       />
+    <MainFooter />
     </div>
   );
 };

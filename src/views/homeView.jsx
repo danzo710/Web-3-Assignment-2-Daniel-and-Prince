@@ -1,8 +1,5 @@
-import { MainFooter } from "../components/mainFooter";
 const mainImage =
   "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=720&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-// const mainColor = "#EFBE4F";
-// const secondaryColor="#2596be";
 export const HomeView = () => {
   return (
     <main className="flex flex-col">
@@ -32,8 +29,6 @@ export const HomeView = () => {
           />
         </section>
       </div>
-
-      <MainFooter />
     </main>
   );
 };

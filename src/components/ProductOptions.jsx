@@ -44,10 +44,10 @@ const ProductOptions = ({ product, open, setOpen }) => {
         </DialogHeader>
 
         <div className="space-y-4 mt-4">
-          {/* Price */}
+
           <p className="text-lg font-semibold">${product.price.toFixed(2)}</p>
 
-          {/* Size Select */}
+
           <div>
             <label className="block mb-1 font-medium text-gray-700">Size</label>
             <Select value={selectedSize} onValueChange={setSelectedSize}>
@@ -64,7 +64,6 @@ const ProductOptions = ({ product, open, setOpen }) => {
             </Select>
           </div>
 
-          {/* Color Select */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">Color</label>
             <Select value={selectedColor} onValueChange={setSelectedColor}>
@@ -81,7 +80,6 @@ const ProductOptions = ({ product, open, setOpen }) => {
             </Select>
           </div>
 
-          {/* Quantity */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">Quantity</label>
             <input

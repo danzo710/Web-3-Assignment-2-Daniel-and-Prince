@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router";
 import { LoginContext } from "../context/loginContext";
-import { MainFooter } from "../components/mainFooter.jsx";
 import {
   Card,
   CardHeader,
@@ -61,8 +60,6 @@ const LoginView = () => {
           </Button>
         </CardFooter>
       </Card>
-
-      <MainFooter />
     </div>
   );
 };
